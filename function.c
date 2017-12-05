@@ -60,14 +60,14 @@ int countdistance(int d)
 }
 void trivial(char *str)
 {
-	int k = 0;
-	char *temp = (char *)malloc(sizeof(char)*(n + 1));
-	for (k = 0; k < d; k++)
-		temp[k] = str[k];
-	for (k = d; k < n; k++)
-		str[k - d] = str[k];
-	for (k = 0; k < d; k++)
-		str[k + n - d] = temp[k];
+	char temp;
+	for (int i = 0; i < d; i++)
+	{
+		temp = *str;
+		for (int k = 1; k < n; k++)
+			*(str + k - 1) = *(str + k);
+		*(str + n - 1) = temp;
+	}
 } 
 int gcd(int a, int b)
 {
@@ -90,10 +90,10 @@ void juggling(char *str)
 				k = k - n;
 			if (k == i)
 				break;
-			str[j] = str[k];
+			*(str+j) = *(str+k);
 			j = k;
 		}
-		str[j] = temp;
+		*(str + j) = temp;
 	}
 }
 void blockswap(char *arr)
