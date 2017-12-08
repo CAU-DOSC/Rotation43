@@ -1,4 +1,4 @@
-NEW BRANCH FOR 2ND PROJECT
+﻿NEW BRANCH FOR 2ND PROJECT
 # README file for TEAM[4,3]:
 
 This text file describes brief but precise and complete specification of project including:
@@ -10,7 +10,7 @@ This text file describes brief but precise and complete specification of project
 Your description start form next line and do not delete lines upto this point.
 
 Function Ownership List
-
+ㅇ
  Trivial Swap Function - 오준석
  Juggling Swap Function - 최동우
  Block-Swap Function - 이지윤
@@ -43,6 +43,8 @@ Implementation Result
 
 Function Algorithm description
 
+-Trivial Swap
+트리비얼 스왑은 배열의 첫 글자를 temp에 저장한 후 배열의 첫자리부터 시작해 그 자리에 그 다음자리의 데이터를 넣은 후, 배열의 마지막 자리에는 temp의 값을 넣는 방식을 d번 반복함으로써 배열을 rotate하는 알고리즘을 이용한다.
 - Juggling Swap
 저글링 스왑은 n과 d의 최대공약수만큼 i(=0) loop를 반복하며, { ( 현재 배열 + d) / n } 이 i 와 다를 동안 현재 배열의 데이터에 { ( 현재 배열 + d) / n }번째의 데이터를 복사하고 복사한 데이터의 위치로 이동하는 과정을 반복한다. 예를 들어 n = 6, d = 3일 때는  [0]에 [3]의 데이터, [3]에 [0]의 데이터, [1]에 [4]의 데이터, [4]에 [1]의 데이터, [2]에 [5]의 데이터, [5]에 [2]의 데이터가 들어가는 방식이며, n = 7, d = 3일 때는 [0]에 [3], [3]에 [6], [6]에 [2], [2]에 [5], [5]에 [1], [1]에 [4], [4]에 [0]의 데이터가 들어가는 방식이다.
 
